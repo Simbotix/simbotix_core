@@ -59,37 +59,6 @@ doc_events = {
 fixtures = [
     {
         "dt": "Simbotix Core Settings",
-    },
-    {
-        "dt": "Email Template",
-        "filters": [
-            ["name", "in", [
-                "Welcome to Simbotix",
-                "Quick Start Guide",
-                "Pro Tips Email",
-                "Customer Case Study",
-                "Feedback Request",
-                "Trial Expiry 3 Days",
-                "Trial Expiry 1 Day",
-                "Trial Ended",
-                "Invoice Email",
-                "Payment Received",
-                "Password Reset",
-                "Product Launch Announcement",
-                "Monthly Newsletter",
-                "Subscription Confirmation",
-                "Subscription Cancelled"
-            ]]
-        ]
-    },
-    {
-        "dt": "Email Campaign",
-        "filters": [
-            ["name", "in", [
-                "Welcome Sequence",
-                "Trial Expiry Sequence"
-            ]]
-        ]
     }
 ]
 
