@@ -1,0 +1,50 @@
+[
+  {
+    "doctype": "Email Campaign",
+    "name": "Welcome Sequence",
+    "campaign_name": "Welcome Sequence",
+    "email_campaign_for": "Lead",
+    "campaign_schedules": [
+      {
+        "email_template": "Welcome to Simbotix",
+        "send_after_days": 0
+      },
+      {
+        "email_template": "Quick Start Guide",
+        "send_after_days": 1
+      },
+      {
+        "email_template": "Pro Tips Email",
+        "send_after_days": 3
+      },
+      {
+        "email_template": "Customer Case Study",
+        "send_after_days": 5
+      },
+      {
+        "email_template": "Feedback Request",
+        "send_after_days": 7
+      }
+    ]
+  },
+  {
+    "doctype": "Email Campaign",
+    "name": "Trial Expiry Sequence",
+    "campaign_name": "Trial Expiry Sequence",
+    "email_campaign_for": "Lead",
+    "campaign_schedules": [
+      {
+        "email_template": "Trial Expiry 3 Days",
+        "send_after_days": 0
+      },
+      {
+        "email_template": "Trial Expiry 1 Day",
+        "send_after_days": 2
+      },
+      {
+        "email_template": "Trial Ended",
+        "send_after_days": 3
+      }
+    ]
+  }
+]

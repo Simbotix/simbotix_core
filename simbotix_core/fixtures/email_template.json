@@ -1,0 +1,107 @@
+[
+  {
+    "doctype": "Email Template",
+    "name": "Welcome to Simbotix",
+    "subject": "Welcome to Simbotix - Here's what happens next",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Welcome to Simbotix! I'm Rajesh, the founder, and I personally read every reply to these emails.</p>\n\n<p>You signed up for <strong>{{ doc.product_name or 'our services' }}</strong>, and I'm excited to have you here.</p>\n\n<p><strong>Here's what happens next:</strong></p>\n<ol>\n<li><strong>Today</strong>: You'll get access to your dashboard</li>\n<li><strong>Tomorrow</strong>: I'll send you our quick-start guide</li>\n<li><strong>Day 3</strong>: Tips to get the most out of your subscription</li>\n</ol>\n\n<p><strong>One quick question</strong> - what's the #1 thing you're hoping to achieve with us?</p>\n\n<p>Just hit reply and let me know. I read every response.</p>\n\n<p>Talk soon,<br>Rajesh</p>\n\n<p><em>P.S. If you paid with Bitcoin, thank you! You're part of a small but growing community of businesses building on a sound money standard.</em></p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Quick Start Guide",
+    "subject": "Your 10-minute quick start guide",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Let's get you up and running in the next 10 minutes.</p>\n\n<p><strong>Step 1: Log into your dashboard</strong><br>\n<a href='{{ doc.portal_url or 'https://simbotix.com' }}'>{{ doc.portal_url or 'https://simbotix.com' }}</a></p>\n\n<p><strong>Step 2: Complete your profile</strong><br>\nAdd your company details and logo. This takes 2 minutes.</p>\n\n<p><strong>Step 3: Create your first record</strong><br>\nClick the \"+\" button and follow the wizard. We've pre-filled some examples to help.</p>\n\n<p><strong>Step 4: Invite your team</strong> (optional)<br>\nGo to Settings → Users → Invite</p>\n\n<p>That's it! You're ready to go.</p>\n\n<p><strong>Stuck?</strong> Reply to this email or check our docs: <a href='https://docs.simbotix.com'>docs.simbotix.com</a></p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Pro Tips Email",
+    "subject": "3 things most users miss",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>You've been using our platform for a few days now. Here are 3 features most users miss:</p>\n\n<p><strong>1. Keyboard shortcuts</strong><br>\nPress <code>?</code> anywhere to see all shortcuts. My favorite: <code>Ctrl+K</code> for quick search.</p>\n\n<p><strong>2. Custom fields</strong><br>\nYou can add any field you need. Go to Settings → Customize → Add Field.</p>\n\n<p><strong>3. Email integration</strong><br>\nForward emails to your inbox and they auto-attach to records.</p>\n\n<p>What feature would make this 10x better for you? I'm always looking for ideas.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Customer Case Study",
+    "subject": "How others save 10 hours/week",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Quick story about another user:</p>\n\n<p>Before Simbotix, they were:</p>\n<ul>\n<li>Tracking everything in spreadsheets</li>\n<li>Missing follow-ups</li>\n<li>Spending 2 hours/day on admin</li>\n</ul>\n\n<p>After switching:</p>\n<ul>\n<li>Everything in one place</li>\n<li>Automated reminders</li>\n<li>10+ hours saved per week</li>\n</ul>\n\n<p><strong>Want similar results?</strong> Here's what they did:</p>\n<ol>\n<li>Imported their existing data (we helped for free)</li>\n<li>Set up automated workflows</li>\n<li>Trained their team in one 30-minute session</li>\n</ol>\n\n<p>Need help getting set up? Book a free 15-minute call: <a href='https://cal.com/simbotix'>cal.com/simbotix</a></p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Feedback Request",
+    "subject": "Quick question (30 seconds)",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>You've been using our platform for a week now.</p>\n\n<p>I have one quick question:</p>\n\n<p><strong>On a scale of 1-10, how likely are you to recommend us to a friend or colleague?</strong></p>\n\n<p>Just reply with a number. That's it.</p>\n\n<p>If you have any other feedback, I'd love to hear it. What's working? What's frustrating?</p>\n\n<p>Thanks for being an early user. Your feedback shapes the product.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Trial Expiry 3 Days",
+    "subject": "Your trial ends in 3 days",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Your trial ends in 3 days.</p>\n\n<p><strong>To keep your data and access</strong>, upgrade before {{ doc.expiry_date or 'the expiry date' }}:</p>\n<p><a href='{{ doc.upgrade_link or \"https://simbotix.com/pricing\" }}'>Upgrade Now →</a></p>\n\n<p><strong>Founding Member Pricing</strong> (limited time):</p>\n<ul>\n<li>Pioneer: $125/month (50% off regular price)</li>\n<li>Builder: $275/month</li>\n<li>Visionary: $500/month</li>\n<li>Legend: $750/month</li>\n</ul>\n<p>Price locked forever once you subscribe.</p>\n\n<p>Questions? Just reply.</p>\n\n<p>Rajesh</p>\n\n<p><em>P.S. Pay with Bitcoin and get an extra 40% off.</em></p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Trial Expiry 1 Day",
+    "subject": "Tomorrow your access ends",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Quick reminder: Your trial ends tomorrow.</p>\n\n<p>After that:</p>\n<ul>\n<li>You'll lose access to your dashboard</li>\n<li>Your data will be archived (not deleted)</li>\n<li>You can reactivate anytime within 30 days</li>\n</ul>\n\n<p><strong>Upgrade now to keep everything</strong>: <a href='{{ doc.upgrade_link or \"https://simbotix.com/pricing\" }}'>Upgrade →</a></p>\n\n<p>Not ready? No problem. Your data is safe for 30 days.</p>\n\n<p>Is there something blocking you from upgrading? Hit reply and let me know - maybe I can help.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Trial Ended",
+    "subject": "Your trial has ended (but your data is safe)",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Your trial ended today.</p>\n\n<p><strong>Your data is safe</strong> and archived for 30 days. You can reactivate anytime.</p>\n\n<p>If you decided we're not right for you, I'd love to know why. Your feedback helps me build a better product.</p>\n\n<p>Just reply with one of these:</p>\n<ul>\n<li>A: Too expensive</li>\n<li>B: Missing features I need</li>\n<li>C: Too complicated</li>\n<li>D: Found a better solution</li>\n<li>E: Other (please explain)</li>\n</ul>\n\n<p>If you change your mind: <a href='{{ doc.upgrade_link or \"https://simbotix.com/pricing\" }}'>Reactivate here</a></p>\n\n<p>Thanks for trying us out.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Invoice Email",
+    "subject": "Invoice #{{ doc.name }} from Simbotix",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or 'there' }},</p>\n\n<p>Your invoice is ready.</p>\n\n<p><strong>Invoice #{{ doc.name }}</strong><br>\nAmount: {{ doc.currency }} {{ doc.grand_total }}<br>\nDue: {{ doc.due_date }}</p>\n\n<p><strong>Pay now</strong>: <a href='{{ doc.payment_link or \"https://simbotix.com/pay\" }}'>Pay Invoice →</a></p>\n\n<p><strong>Bitcoin Payment Option</strong><br>\nPay with Bitcoin and get 40% off.<br>\nPayment link: <a href='https://pay.simbotix.com'>pay.simbotix.com</a></p>\n\n<p>Questions about this invoice? Just reply.</p>\n\n<p>Thanks for being a Simbotix customer.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Payment Received",
+    "subject": "Payment received - Thank you!",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or 'there' }},</p>\n\n<p>We received your payment. Thank you!</p>\n\n<p><strong>Receipt Details</strong><br>\nInvoice: #{{ doc.reference_name or doc.name }}<br>\nAmount: {{ doc.currency or 'USD' }} {{ doc.paid_amount or doc.amount }}<br>\nPayment Method: {{ doc.mode_of_payment or 'Card' }}<br>\nDate: {{ doc.posting_date or doc.creation }}</p>\n\n<p>Your next invoice will be generated on {{ doc.next_invoice_date or 'your next billing date' }}.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Password Reset",
+    "subject": "Reset your Simbotix password",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.full_name or doc.first_name or 'there' }},</p>\n\n<p>We received a request to reset your password.</p>\n\n<p><strong>Reset your password</strong>: <a href='{{ doc.reset_password_link }}'>{{ doc.reset_password_link }}</a></p>\n\n<p>This link expires in 1 hour.</p>\n\n<p>Didn't request this? You can safely ignore this email. Your password won't change unless you click the link above.</p>\n\n<p>If you're having trouble, reply to this email for help.</p>\n\n<p>Simbotix Security Team</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Product Launch Announcement",
+    "subject": "Introducing {{ doc.product_name or 'our new product' }}",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Big news: We just launched <strong>{{ doc.product_name or 'something new' }}</strong>!</p>\n\n<p><strong>What is it?</strong><br>\n{{ doc.description or 'A new addition to the Simbotix ecosystem.' }}</p>\n\n<p><strong>Who is it for?</strong><br>\n{{ doc.target_audience or 'Businesses looking to grow.' }}</p>\n\n<p><strong>Key features:</strong></p>\n<ul>\n<li>{{ doc.feature_1 or 'Feature 1' }}</li>\n<li>{{ doc.feature_2 or 'Feature 2' }}</li>\n<li>{{ doc.feature_3 or 'Feature 3' }}</li>\n</ul>\n\n<p><strong>Founding Member Pricing</strong> (limited time):<br>\nGet 50% off forever when you sign up now.</p>\n\n<p><a href='{{ doc.cta_link or \"https://simbotix.com\" }}'>Learn More →</a></p>\n\n<p>As always, pay with Bitcoin for an extra 40% off.</p>\n\n<p>Questions? Just reply.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Monthly Newsletter",
+    "subject": "Simbotix Monthly: {{ doc.month or 'This Month' }}'s Updates",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or doc.lead_name or 'there' }},</p>\n\n<p>Here's what happened at Simbotix this month:</p>\n\n<p><strong>📊 Numbers</strong></p>\n<ul>\n<li>MRR: {{ doc.mrr or 'Growing!' }}</li>\n<li>New features: {{ doc.feature_count or 'Several' }}</li>\n</ul>\n\n<p><strong>🚀 New Features</strong></p>\n<p>{{ doc.features_list or 'Check our blog for the full list of updates.' }}</p>\n\n<p><strong>📝 From the Blog</strong></p>\n<p>{{ doc.blog_posts or 'Visit simbotix.com/blog for our latest posts.' }}</p>\n\n<p><strong>💡 Tip of the Month</strong></p>\n<p>{{ doc.tip or 'Press Ctrl+K anywhere for quick search!' }}</p>\n\n<p><strong>🎯 Coming Next Month</strong></p>\n<p>{{ doc.preview or 'More exciting updates on the way.' }}</p>\n\n<p>Thanks for being part of the Simbotix journey.</p>\n\n<p>Rajesh</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Subscription Confirmation",
+    "subject": "Welcome to {{ doc.plan_name or 'Simbotix' }} - You're all set!",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or 'there' }},</p>\n\n<p>🎉 <strong>Welcome to {{ doc.plan_name or 'Simbotix' }}!</strong></p>\n\n<p>Your subscription is now active.</p>\n\n<p><strong>Plan Details:</strong></p>\n<ul>\n<li>Plan: {{ doc.plan_name or 'Founding Member' }}</li>\n<li>Price: {{ doc.currency or 'USD' }} {{ doc.amount or '125' }}/month (locked forever)</li>\n<li>Next billing: {{ doc.next_billing_date or '30 days from now' }}</li>\n</ul>\n\n<p><strong>What's included:</strong></p>\n<ul>\n<li>{{ doc.feature_1 or 'Full access to your plan features' }}</li>\n<li>{{ doc.feature_2 or 'Priority support' }}</li>\n<li>{{ doc.feature_3 or 'Direct founder access' }}</li>\n</ul>\n\n<p><strong>Get started:</strong> <a href='{{ doc.dashboard_link or \"https://simbotix.com\" }}'>Go to Dashboard →</a></p>\n\n<p>If you have any questions, just reply to this email.</p>\n\n<p>Welcome aboard!</p>\n\n<p>Rajesh<br>\nFounder, Simbotix</p>"
+  },
+  {
+    "doctype": "Email Template",
+    "name": "Subscription Cancelled",
+    "subject": "We're sorry to see you go",
+    "use_html": 1,
+    "response_html": "<p>Hi {{ doc.customer_name or 'there' }},</p>\n\n<p>Your subscription has been cancelled as requested.</p>\n\n<p><strong>What happens now:</strong></p>\n<ul>\n<li>Your access continues until {{ doc.access_end_date or 'the end of your billing period' }}</li>\n<li>Your data will be archived for 30 days</li>\n<li>You can reactivate anytime within 30 days</li>\n</ul>\n\n<p>I'd really appreciate knowing why you left. Your feedback helps me improve.</p>\n\n<p>Just reply with:</p>\n<ul>\n<li>A: Too expensive</li>\n<li>B: Missing features</li>\n<li>C: Found alternative</li>\n<li>D: Business closed/changed</li>\n<li>E: Other</li>\n</ul>\n\n<p>If you change your mind, you can reactivate here: <a href='https://simbotix.com/reactivate'>Reactivate</a></p>\n\n<p>Thanks for giving us a try.</p>\n\n<p>Rajesh</p>"
+  }
+]
