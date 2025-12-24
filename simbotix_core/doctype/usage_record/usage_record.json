@@ -1,0 +1,140 @@
+{
+  "doctype": "DocType",
+  "name": "Usage Record",
+  "module": "Simbotix Core",
+  "autoname": "format:UR-{YYYY}-{MM}-{#####}",
+  "editable_grid": 0,
+  "track_changes": 0,
+  "field_order": [
+    "section_usage",
+    "resource_type",
+    "quantity",
+    "timestamp",
+    "column_break_usage",
+    "app_name",
+    "doctype_ref",
+    "docname_ref",
+    "section_aggregation",
+    "period_start",
+    "period_end",
+    "aggregated",
+    "aggregated_at",
+    "column_break_sync",
+    "synced",
+    "synced_at"
+  ],
+  "fields": [
+    {
+      "fieldname": "section_usage",
+      "fieldtype": "Section Break",
+      "label": "Usage Details"
+    },
+    {
+      "fieldname": "resource_type",
+      "fieldtype": "Select",
+      "label": "Resource Type",
+      "options": "storage_gb\nbandwidth_gb\ndatabase_gb\napi_calls\nfile_uploads_gb\nexecutions\nemails\nai_queries\nwebhooks",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "quantity",
+      "fieldtype": "Float",
+      "label": "Quantity",
+      "reqd": 1,
+      "in_list_view": 1,
+      "precision": "6",
+      "description": "Amount consumed (e.g., 0.001 GB, 1 API call)"
+    },
+    {
+      "fieldname": "timestamp",
+      "fieldtype": "Datetime",
+      "label": "Timestamp",
+      "default": "Now",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_usage",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "app_name",
+      "fieldtype": "Data",
+      "label": "App Name",
+      "description": "Source app (e.g., simbotix_funnel_engine, flowz)"
+    },
+    {
+      "fieldname": "doctype_ref",
+      "fieldtype": "Link",
+      "label": "DocType",
+      "options": "DocType",
+      "description": "Associated DocType (optional)"
+    },
+    {
+      "fieldname": "docname_ref",
+      "fieldtype": "Dynamic Link",
+      "label": "Document",
+      "options": "doctype_ref"
+    },
+    {
+      "fieldname": "section_aggregation",
+      "fieldtype": "Section Break",
+      "label": "Aggregation & Sync",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "period_start",
+      "fieldtype": "Datetime",
+      "label": "Period Start",
+      "description": "Start of aggregation period (for aggregated records)"
+    },
+    {
+      "fieldname": "period_end",
+      "fieldtype": "Datetime",
+      "label": "Period End",
+      "description": "End of aggregation period (for aggregated records)"
+    },
+    {
+      "fieldname": "aggregated",
+      "fieldtype": "Check",
+      "label": "Aggregated",
+      "default": "0",
+      "read_only": 1
+    },
+    {
+      "fieldname": "aggregated_at",
+      "fieldtype": "Datetime",
+      "label": "Aggregated At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_sync",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "synced",
+      "fieldtype": "Check",
+      "label": "Synced to Central",
+      "default": "0",
+      "read_only": 1
+    },
+    {
+      "fieldname": "synced_at",
+      "fieldtype": "Datetime",
+      "label": "Synced At",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "timestamp",
+  "sort_order": "DESC"
+}

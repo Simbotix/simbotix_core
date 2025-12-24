@@ -1,0 +1,184 @@
+{
+  "doctype": "DocType",
+  "name": "Simbotix Core Settings",
+  "module": "Simbotix Core",
+  "issingle": 1,
+  "editable_grid": 0,
+  "track_changes": 0,
+  "field_order": [
+    "section_api",
+    "central_api_url",
+    "api_key",
+    "api_secret",
+    "column_break_api",
+    "license_key",
+    "section_sync",
+    "sync_interval_hours",
+    "last_license_sync",
+    "last_usage_sync",
+    "column_break_sync",
+    "sync_status",
+    "last_sync_error",
+    "section_alerts",
+    "alert_email",
+    "warning_threshold",
+    "hard_limit_threshold",
+    "column_break_alerts",
+    "block_on_exceeded",
+    "send_alert_emails",
+    "section_caching",
+    "use_redis_cache",
+    "cache_ttl_seconds"
+  ],
+  "fields": [
+    {
+      "fieldname": "section_api",
+      "fieldtype": "Section Break",
+      "label": "Central API Configuration"
+    },
+    {
+      "fieldname": "central_api_url",
+      "fieldtype": "Data",
+      "label": "Central API URL",
+      "default": "https://simbotix.com/api",
+      "description": "Base URL for simbotix.com central API"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Data",
+      "label": "API Key",
+      "description": "Site API key from simbotix.com"
+    },
+    {
+      "fieldname": "api_secret",
+      "fieldtype": "Password",
+      "label": "API Secret",
+      "description": "Site API secret from simbotix.com"
+    },
+    {
+      "fieldname": "column_break_api",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "license_key",
+      "fieldtype": "Data",
+      "label": "License Key",
+      "description": "Active license key for this site"
+    },
+    {
+      "fieldname": "section_sync",
+      "fieldtype": "Section Break",
+      "label": "Sync Settings"
+    },
+    {
+      "fieldname": "sync_interval_hours",
+      "fieldtype": "Int",
+      "label": "Sync Interval (hours)",
+      "default": "1",
+      "description": "How often to sync with central (1-24 hours)"
+    },
+    {
+      "fieldname": "last_license_sync",
+      "fieldtype": "Datetime",
+      "label": "Last License Sync",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_usage_sync",
+      "fieldtype": "Datetime",
+      "label": "Last Usage Sync",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_sync",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "sync_status",
+      "fieldtype": "Select",
+      "label": "Sync Status",
+      "options": "Not Configured\nSynced\nPending\nFailed",
+      "default": "Not Configured",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_sync_error",
+      "fieldtype": "Small Text",
+      "label": "Last Sync Error",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_alerts",
+      "fieldtype": "Section Break",
+      "label": "Alert Settings"
+    },
+    {
+      "fieldname": "alert_email",
+      "fieldtype": "Data",
+      "label": "Alert Email",
+      "options": "Email",
+      "description": "Email to notify when usage thresholds are reached"
+    },
+    {
+      "fieldname": "warning_threshold",
+      "fieldtype": "Percent",
+      "label": "Warning Threshold",
+      "default": "80",
+      "description": "Percentage at which to send warning (default: 80%)"
+    },
+    {
+      "fieldname": "hard_limit_threshold",
+      "fieldtype": "Percent",
+      "label": "Hard Limit Threshold",
+      "default": "100",
+      "description": "Percentage at which to enforce limit (default: 100%)"
+    },
+    {
+      "fieldname": "column_break_alerts",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "block_on_exceeded",
+      "fieldtype": "Check",
+      "label": "Block on Exceeded",
+      "default": "0",
+      "description": "Block actions when limit exceeded (vs overage billing)"
+    },
+    {
+      "fieldname": "send_alert_emails",
+      "fieldtype": "Check",
+      "label": "Send Alert Emails",
+      "default": "1",
+      "description": "Send email notifications when thresholds are reached"
+    },
+    {
+      "fieldname": "section_caching",
+      "fieldtype": "Section Break",
+      "label": "Performance",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "use_redis_cache",
+      "fieldtype": "Check",
+      "label": "Use Redis Cache",
+      "default": "1",
+      "description": "Cache license data in Redis for faster lookups"
+    },
+    {
+      "fieldname": "cache_ttl_seconds",
+      "fieldtype": "Int",
+      "label": "Cache TTL (seconds)",
+      "default": "300",
+      "description": "How long to cache license data (default: 5 minutes)"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

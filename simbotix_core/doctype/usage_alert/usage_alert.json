@@ -1,0 +1,145 @@
+{
+  "doctype": "DocType",
+  "name": "Usage Alert",
+  "module": "Simbotix Core",
+  "autoname": "format:UA-{YYYY}-{MM}-{#####}",
+  "editable_grid": 0,
+  "track_changes": 1,
+  "field_order": [
+    "section_alert",
+    "resource_type",
+    "alert_type",
+    "threshold_percent",
+    "column_break_alert",
+    "current_usage",
+    "limit_value",
+    "usage_percent",
+    "section_status",
+    "acknowledged",
+    "acknowledged_by",
+    "acknowledged_at",
+    "section_actions",
+    "notification_sent",
+    "email_sent_to",
+    "column_break_actions",
+    "overage_amount",
+    "overage_rate"
+  ],
+  "fields": [
+    {
+      "fieldname": "section_alert",
+      "fieldtype": "Section Break",
+      "label": "Alert Details"
+    },
+    {
+      "fieldname": "resource_type",
+      "fieldtype": "Select",
+      "label": "Resource Type",
+      "options": "storage_gb\nbandwidth_gb\ndatabase_gb\napi_calls\nfile_uploads_gb\nexecutions\nemails\nai_queries\nwebhooks",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "alert_type",
+      "fieldtype": "Select",
+      "label": "Alert Type",
+      "options": "Warning\nExceeded\nBlocked",
+      "reqd": 1,
+      "in_list_view": 1,
+      "description": "Warning=80%, Exceeded=100%, Blocked=action denied"
+    },
+    {
+      "fieldname": "threshold_percent",
+      "fieldtype": "Percent",
+      "label": "Threshold %",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_alert",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "current_usage",
+      "fieldtype": "Float",
+      "label": "Current Usage",
+      "precision": "2"
+    },
+    {
+      "fieldname": "limit_value",
+      "fieldtype": "Float",
+      "label": "Limit",
+      "precision": "2"
+    },
+    {
+      "fieldname": "usage_percent",
+      "fieldtype": "Percent",
+      "label": "Usage %",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_status",
+      "fieldtype": "Section Break",
+      "label": "Status"
+    },
+    {
+      "fieldname": "acknowledged",
+      "fieldtype": "Check",
+      "label": "Acknowledged",
+      "default": "0"
+    },
+    {
+      "fieldname": "acknowledged_by",
+      "fieldtype": "Link",
+      "label": "Acknowledged By",
+      "options": "User"
+    },
+    {
+      "fieldname": "acknowledged_at",
+      "fieldtype": "Datetime",
+      "label": "Acknowledged At"
+    },
+    {
+      "fieldname": "section_actions",
+      "fieldtype": "Section Break",
+      "label": "Actions Taken"
+    },
+    {
+      "fieldname": "notification_sent",
+      "fieldtype": "Check",
+      "label": "Notification Sent",
+      "default": "0"
+    },
+    {
+      "fieldname": "email_sent_to",
+      "fieldtype": "Data",
+      "label": "Email Sent To"
+    },
+    {
+      "fieldname": "column_break_actions",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "overage_amount",
+      "fieldtype": "Currency",
+      "label": "Overage Amount",
+      "description": "Calculated overage charges if applicable"
+    },
+    {
+      "fieldname": "overage_rate",
+      "fieldtype": "Data",
+      "label": "Overage Rate",
+      "description": "Rate used for overage calculation"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "creation",
+  "sort_order": "DESC"
+}

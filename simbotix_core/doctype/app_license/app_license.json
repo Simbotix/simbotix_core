@@ -1,0 +1,165 @@
+{
+  "doctype": "DocType",
+  "name": "App License",
+  "module": "Simbotix Core",
+  "autoname": "field:license_key",
+  "editable_grid": 0,
+  "track_changes": 1,
+  "field_order": [
+    "section_basic",
+    "license_key",
+    "customer_id",
+    "customer_name",
+    "column_break_basic",
+    "tier",
+    "status",
+    "expiry_date",
+    "section_sync",
+    "last_synced",
+    "sync_status",
+    "column_break_sync",
+    "central_api_url",
+    "sync_error",
+    "section_limits",
+    "resource_limits",
+    "section_features",
+    "enabled_features",
+    "column_break_features",
+    "enabled_apps"
+  ],
+  "fields": [
+    {
+      "fieldname": "section_basic",
+      "fieldtype": "Section Break",
+      "label": "License Information"
+    },
+    {
+      "fieldname": "license_key",
+      "fieldtype": "Data",
+      "label": "License Key",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1,
+      "description": "UUID-format license key from simbotix.com"
+    },
+    {
+      "fieldname": "customer_id",
+      "fieldtype": "Data",
+      "label": "Customer ID",
+      "reqd": 1,
+      "description": "Central customer ID from simbotix.com"
+    },
+    {
+      "fieldname": "customer_name",
+      "fieldtype": "Data",
+      "label": "Customer Name",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_basic",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "tier",
+      "fieldtype": "Select",
+      "label": "Tier",
+      "options": "Trial\nPioneer\nBuilder\nVisionary\nLegend\nStarter\nGrowth\nScale\nEnterprise",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nSuspended\nExpired\nCancelled\nTrial",
+      "default": "Trial",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "expiry_date",
+      "fieldtype": "Date",
+      "label": "Expiry Date",
+      "description": "License expiry date (blank = lifetime)"
+    },
+    {
+      "fieldname": "section_sync",
+      "fieldtype": "Section Break",
+      "label": "Sync Status"
+    },
+    {
+      "fieldname": "last_synced",
+      "fieldtype": "Datetime",
+      "label": "Last Synced",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sync_status",
+      "fieldtype": "Select",
+      "label": "Sync Status",
+      "options": "Synced\nPending\nFailed",
+      "default": "Pending",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_sync",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "central_api_url",
+      "fieldtype": "Data",
+      "label": "Central API URL",
+      "default": "https://simbotix.com/api",
+      "description": "Override central API endpoint (for testing)"
+    },
+    {
+      "fieldname": "sync_error",
+      "fieldtype": "Small Text",
+      "label": "Last Sync Error",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_limits",
+      "fieldtype": "Section Break",
+      "label": "Resource Limits"
+    },
+    {
+      "fieldname": "resource_limits",
+      "fieldtype": "JSON",
+      "label": "Resource Limits",
+      "description": "JSON: {storage_gb: 10, bandwidth_gb: 100, database_gb: 2, api_calls: 50000, executions: 10000, emails: 1000, ai_queries: 0, webhooks: 5}"
+    },
+    {
+      "fieldname": "section_features",
+      "fieldtype": "Section Break",
+      "label": "Features & Apps"
+    },
+    {
+      "fieldname": "enabled_features",
+      "fieldtype": "JSON",
+      "label": "Enabled Features",
+      "description": "JSON array: [\"webhooks\", \"video_tracking\", \"funnel_analytics\", \"ai_agents\"]"
+    },
+    {
+      "fieldname": "column_break_features",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "enabled_apps",
+      "fieldtype": "JSON",
+      "label": "Enabled Apps",
+      "description": "JSON array: [\"simbotix_funnel_engine\", \"flowz\", \"botz_studio\"]"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

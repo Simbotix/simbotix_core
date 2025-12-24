@@ -1,0 +1,20 @@
+[project]
+name = "simbotix_core"
+version = "1.0.0"
+description = "Shared licensing and metering foundation for all Simbotix apps"
+authors = [
+    {name = "Rajesh Medampudi", email = "rajesh@simbotix.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "frappe",
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.dev-dependencies]
+pytest = ">=7.0"
